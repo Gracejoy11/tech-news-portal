@@ -1,0 +1,51 @@
+/* Step 9 
+Set the background and font for the whole page */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf5;
+    color: #333;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+/* Center the title*/
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/*Style each individuals blog post as a white card*/
+.post-card{
+    background: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);  /*Adds a soft shadow*/
+    border-left: 5px solid #007bff; /* Adds a professional blue stripe*/
+}
+
+.post-card h2{
+    margin-top: 0;
+    color: #007bff;
+}
+
+/*Styles the summary text*/
+.post-card div {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff; /* Use your Midnight Blue here if you prefer! */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Capstone Blog</title>
+    <link rel="stylesheet" href="/styles.css">  <!-- step 8 -->
+</head>
+<body>
+    <!-- step 7 -->
+    <h1>Grace's Tech Hub</h1>
+    <div class="container">
+        <% if (locals.posts && locals.posts.length > 0){ %>
+            <% posts.forEach(post =>{%>  <!---->
+                <div class="post-card">
+                    <h2> <%-  post.title.rendered %> </h2>
+                    <div> <%- post.excerpt.rendered %> </div>
+                    <a href=" <%= post.link %>" target="_blank" 
+                        class="read-more">Read Full Article </a>
+                </div>
+            <%}) %>  
+        <%} else if(locals.error){ %>
+            <p class="error">Error Loading news: <%= error %></p>
+            <%} else{%> 
+                <p>No posts available at the moment</p>
+        <%} %> 
+    </div>
+</body>
+</html>
