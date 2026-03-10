@@ -1,7 +1,7 @@
 import express from "express";  // step 5
 import axios from "axios";  // step 5
 
-const port = 3000;  // step 5
+// const port = 3000; remove this step and go to line 24 to add it  // step 5
 const app = express();  // step 5
 
 // Tell express to use the 'public' folder for CSS/images
@@ -20,6 +20,8 @@ app.get("/", async(req, res)=>{
         res.render("index.ejs", {error: error.message})
     }
 });  // step 6
+
+const port = process.env.PORT||3000;
 
 app.listen(port, ()=>{
     console.log(`server is running on http://localhost:${port}`);
